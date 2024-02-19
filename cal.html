@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <p>Input 1 :</p>
+      <input type="text" id="input1" />
+      <script>
+        // document.getElementById("input1").addEventListener("keyup", function (event) {
+        //     let a = parseFloat(event.target.value);
+        //     console.log("a: " + a);
+        //   });
+      </script>
+
+      <p>Input 2 :</p>
+      <input type="number" id="input2" />
+      <script>
+        // document.getElementById("input2").addEventListener("keyup", function (event) {
+        //     let b = parseFloat(event.target.value);
+        //     console.log("b:" + b);
+        //   });
+      </script>
+
+      <h3>Select</h3>
+      <select id="operator">
+        <option value="add">Add</option>
+        <option value="min">Minus</option>
+        <option value="mul">Multiply</option>
+        <option value="div">Divide</option>
+      </select>
+
+      <button type="button" id="selectBtn" disabled  onclick="calc()">Select</button>
+      <script>
+        document.getElementById("input1").addEventListener("keyup", function (event) {
+            let a = parseFloat(event.target.value);
+            console.log("a: " + a);
+            if(a != NaN) {
+                document.getElementById('selectBtn').removeAttribute('disabled');
+            } else {
+                document.getElementById('selectBtn').setAttribute('disabled', true);
+            }
+          });
+
+        // document
+        //   .getElementById("input2")
+        //   .addEventListener("keyup", function (event) {
+        //     let b = parseFloat(event.target.value);
+        //     console.log("b:" + b);
+        //   });
+
+        // let deleteBtn = document.getElementById("selectBtn");
+        // console.log(a);
+        // console.log(op);
+        // if (a != NaN && b != NaN) {
+        //   deleteBtn.removeAttribute("disabled");
+        // }
+      </script>
+    </form>
+
+    <h3>Output</h3>
+    <div id="result"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
