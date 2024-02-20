@@ -20,16 +20,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS Link -->
     <link rel="stylesheet" href="main.css" />
-    <!-- TailWind CSS -->
   </head>
-  <body
-    class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center"
-  >
+  <body class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center p-10">
     <main
-      class="flex flex-col items-center justify-center border border-green-300 p-5"
+      class="flex flex-col items-center justify-center  border-green-300 p-5 gap-y-10"
     >
       <!-- Home -->
-      <section class="hidden home kode-mono-regular border border-purple-300 p-5 min-h-screen">
+      <section class=" home " id="home">
         <div
           class="border border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
         >
@@ -41,8 +38,9 @@
             Unleash your keyboard Kung-Fu. Press "Enter" to play!
           </p>
 
-          <button
+          <button id="homeBtn"
             class="bg-white text-2xl px-6 py-3 text-gray-900 rounded-xl hover:bg-orange-500 hover:text-white hover:text-2xl hover:font-semibold"
+            onclick="play()"
           >
             Play!
           </button>
@@ -50,9 +48,9 @@
       </section>
 
       <!-- Play ground -->
-      <section class="hidden playGround kode-mono-regular border border-purple-300 p-5 min-h-screen">
+      <section class="hidden playGround " id="playGround">
         <div
-          class="border border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
+          class=" border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
         >
           <!-- ArtBoard -->
           <div
@@ -99,7 +97,7 @@
           </div>
 
           <!-- Like & Score -->
-          <div class="flex justify-between border border-blue-300 min-w-full p-5">
+          <div class="flex justify-between border-blue-300 min-w-full p-5">
             <button class="btn px-6 text-white font-semibold hover:text-orange-500 bg-purple-500">
               Like <img src="images/love.svg" alt="" /><span> 1</span>
             </button>
@@ -111,15 +109,19 @@
       </section>
 
       <!-- Score -->
-      <section class="score kode-mono-regular border border-purple-300 p-5 min-h-screen flex flex-col justify-center">
-        <div class="card w-96 bg-gradient-to-r from-cyan-500  to-[#ffffff70] shadow-xl">            
-            <div class="card-body items-center text-center gap-5">
-              <h1 class="card-title text-4xl text-white font-bold ">Score : <span class="font-normal">14</span></h1>
-              <button class="btn  text-2xl bg-white hover:text-orange-400">Play Now!</button>
-              <p class="text-white font-normal text-xl">Practice will make you Pro!</p>
-            </div>
-          </div>
+      <section class="hidden score" id="score">
+        <div class="kode-mono-regular border border-purple-300 p-5 min-h-screen flex flex-col justify-center">
+            <div class="card w-96 bg-gradient-to-r from-cyan-500  to-[#ffffff70] shadow-xl">            
+                <div class="card-body items-center text-center gap-5">
+                  <h1 class="card-title text-4xl text-white font-bold ">Score : <span class="font-normal">14</span></h1>
+                  <button class="btn  text-2xl bg-white hover:text-orange-400">Play Now!</button>
+                  <p class="text-white font-normal text-xl">Practice will make you Pro!</p>
+                </div>
+              </div>
+        </div>
+        
       </section>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
