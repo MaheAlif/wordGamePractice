@@ -21,14 +21,16 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="main.css" />
   </head>
-  <body class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center p-10">
+  <body
+    class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center p-10"
+  >
     <main
-      class="flex flex-col items-center justify-center  border-green-300 p-5 gap-y-10"
+      class="flex flex-col items-center justify-center border-green-300 p-5 gap-y-10"
     >
       <!-- Home -->
-      <section class=" home " id="home">
+      <section class="home" id="home">
         <div
-          class="border border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
+          class=" border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
         >
           <h1 class="text-8xl text-white font-extrabold uppercase">
             Alphabet clash!
@@ -38,7 +40,8 @@
             Unleash your keyboard Kung-Fu. Press "Enter" to play!
           </p>
 
-          <button id="homeBtn"
+          <button
+            id="homeBtn"
             class="bg-white text-2xl px-6 py-3 text-gray-900 rounded-xl hover:bg-orange-500 hover:text-white hover:text-2xl hover:font-semibold"
             onclick="play()"
           >
@@ -48,12 +51,13 @@
       </section>
 
       <!-- Play ground -->
-      <section class="hidden playGround " id="playGround">
+      <section class="hidden playGround" id="playGround">
         <div
-          class=" border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
+          class="border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
         >
           <!-- ArtBoard -->
           <div
+            id="artboard"
             class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3] border-[20px] border-[#010313CC] rounded-2xl text-center text-8xl font-bold text-black flex flex-col justify-center"
           >
             Mahe ALif
@@ -62,64 +66,86 @@
           <!-- KeyBoard -->
           <div>
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd class="kbd">q</kbd>
-              <kbd class="kbd">w</kbd>
-              <kbd class="kbd">e</kbd>
-              <kbd class="kbd">r</kbd>
-              <kbd class="kbd">t</kbd>
-              <kbd class="kbd">y</kbd>
-              <kbd class="kbd">u</kbd>
-              <kbd class="kbd">i</kbd>
-              <kbd class="kbd">o</kbd>
-              <kbd class="kbd">p</kbd>
+              <kbd id="q" class="kbd">q</kbd>
+              <kbd id="w" class="kbd">w</kbd>
+              <kbd id="e" class="kbd">e</kbd>
+              <kbd id="r" class="kbd">r</kbd>
+              <kbd id="t" class="kbd">t</kbd>
+              <kbd id="y" class="kbd">y</kbd>
+              <kbd id="u" class="kbd">u</kbd>
+              <kbd id="i" class="kbd">i</kbd>
+              <kbd id="o" class="kbd">o</kbd>
+              <kbd id="p" class="kbd">p</kbd>
             </div>
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd class="kbd">a</kbd>
-              <kbd class="kbd">s</kbd>
-              <kbd class="kbd">d</kbd>
-              <kbd class="kbd">f</kbd>
-              <kbd class="kbd">g</kbd>
-              <kbd class="kbd">h</kbd>
-              <kbd class="kbd">j</kbd>
-              <kbd class="kbd">k</kbd>
-              <kbd class="kbd">l</kbd>
+              <kbd id="a" class="kbd">a</kbd>
+              <kbd id="s" class="kbd">s</kbd>
+              <kbd id="d" class="kbd">d</kbd>
+              <kbd id="f" class="kbd">f</kbd>
+              <kbd id="g" class="kbd">g</kbd>
+              <kbd id="h" class="kbd">h</kbd>
+              <kbd id="j" class="kbd">j</kbd>
+              <kbd id="k" class="kbd">k</kbd>
+              <kbd id="l" class="kbd">l</kbd>
             </div>
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd class="kbd">z</kbd>
-              <kbd class="kbd">x</kbd>
-              <kbd class="kbd">c</kbd>
-              <kbd class="kbd">v</kbd>
-              <kbd class="kbd">b</kbd>
-              <kbd class="kbd">n</kbd>
-              <kbd class="kbd">m</kbd>
-              <kbd class="kbd">/</kbd>
+              <kbd id="z" class="kbd">z</kbd>
+              <kbd id="x" class="kbd">x</kbd>
+              <kbd id="c" class="kbd">c</kbd>
+              <kbd id="v" class="kbd">v</kbd>
+              <kbd id="b" class="kbd">b</kbd>
+              <kbd id="n" class="kbd">n</kbd>
+              <kbd id="m" class="kbd">m</kbd>
+              <kbd id="/" class="kbd">/</kbd>
             </div>
           </div>
 
           <!-- Like & Score -->
-          <div class="flex justify-between border-blue-300 min-w-full p-5">
-            <button class="btn px-6 text-white font-semibold hover:text-orange-500 bg-purple-500">
+          <div
+            id="likeScore"
+            class="likeScore flex justify-between border-blue-300 min-w-full p-5"
+          >
+            <button
+              class="btn px-6 text-white font-semibold hover:text-orange-500 bg-purple-500"
+            >
               Like <img src="images/love.svg" alt="" /><span> 1</span>
             </button>
-            <button class="btn px-6 text-white font-semibold hover:text-orange-500 bg-purple-500">
-              Score <img src="images/dollar.svg" alt=""><span> 1</span>
+            <button
+              id="homeBtn"
+              class="bg-white text-2xl px-6 py-3 text-gray-900 rounded-xl hover:bg-orange-500 hover:text-white hover:text-2xl hover:font-semibold"
+              onclick="playAgain()"
+            >
+              Play Again!
+            </button>
+            
+            <button id="scoreBtn" class="btn px-6 text-white font-semibold hover:text-orange-500 bg-purple-500">
+              Score <img src="images/dollar.svg" alt="" /><span>1</span>
             </button>
           </div>
         </div>
       </section>
 
       <!-- Score -->
-      <section class="hidden score" id="score">
-        <div class="kode-mono-regular border border-purple-300 p-5 min-h-screen flex flex-col justify-center">
-            <div class="card w-96 bg-gradient-to-r from-cyan-500  to-[#ffffff70] shadow-xl">            
-                <div class="card-body items-center text-center gap-5">
-                  <h1 class="card-title text-4xl text-white font-bold ">Score : <span class="font-normal">14</span></h1>
-                  <button class="btn  text-2xl bg-white hover:text-orange-400">Play Now!</button>
-                  <p class="text-white font-normal text-xl">Practice will make you Pro!</p>
-                </div>
-              </div>
+      <section class="score hidden" id="score">
+        <div
+          class="kode-mono-regular border-purple-300 p-5 min-h-screen flex flex-col justify-center"
+        >
+          <div
+            class="card w-96 bg-gradient-to-r from-cyan-500 to-[#ffffff70] shadow-xl"
+          >
+            <div class="card-body items-center text-center gap-5">
+              <h1  id="showScore" class="showScore card-title text-4xl text-white font-bold">
+                Score : <span class="font-normal">14</span>
+              </h1>
+              <button onclick="play()" class="btn text-2xl bg-white hover:text-orange-400">
+                Play Now!
+              </button>
+              <p class="text-white font-normal text-xl">
+                Practice will make you Pro!
+              </p>
+            </div>
+          </div>
         </div>
-        
       </section>
     </main>
     <script src="main.js"></script>
